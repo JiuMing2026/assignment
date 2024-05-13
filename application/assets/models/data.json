@@ -1,0 +1,35 @@
+{
+	"pageTextData": [
+		{
+			"title": "Coca Cola",
+			"subTitle": "Atlanta, 1886",
+			"description": "In 1886, Dr. John Pemberton was inspired by a medical journals. He mixed the substances mentioned in the journal into the medicine, and then mixed it with carbonated water into a dark syrup. The customers who tasted it said it was ''excellent'' !"
+		},
+		{
+			"title": "Fanta",
+			"subTitle": "Italy, 1955",
+			"description": "Fanta brand is an orange-flavored soda launched by Coca-Cola Company in Italy in 1955. Fanta orange soda is the main core flavour, accounting for 70% of the sales, but other fruit flavours also have many fans. Bright packaging colour and bright fruit taste are the reasons for Fanta soda's popularity."
+		},
+		{
+			"title": "Sprite",
+			"subTitle": "West Germany, 1959",
+			"description": "Sprite is a product listed by the Coca-Cola Company in 1961. At present, it is the largest lemon-flavored soft drink brand in the world. Sprite is currently sold in more than 190 countries around the world and is currently the third-largest soft drink brand in the world."
+		},
+		{
+			"x3dModelTile": "Coca Cola X3D Model",
+			"x3dCreationMethod": "This X3D model of the Coke bottles can have been created in 3ds Max, exported to VRML97 and converted, using the instant reality transcoders, to X3D for display online."
+		},
+		{
+			"x3dModelTile": "Fanta X3D Model",
+			"x3dCreationMethod": "This X3D model of the Fanta cans can have been created in 3ds Max, exported to VRML97 and converted, using the instant reality transcoders, to X3D for display online."
+		},
+		{
+			"x3dModelTile": "Sprite X3D Model",
+			"x3dCreationMethod": "This X3D model of the Sprite cups can have been created in 3ds Max, exported to VRML97 and converted, using the instant reality transcoders, to X3D for display online."
+		},
+		{
+			"garlleryTitle": "Gallery",
+			"galleryDescription": "Corona in 3ds Max"
+		}
+	]
+}
