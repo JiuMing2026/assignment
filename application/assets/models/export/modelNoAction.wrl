@@ -1,0 +1,423 @@
+#VRML V2.0 utf8
+
+# Produced by 3D Studio MAX VRML97 exporter, Version 24.03, Revision 12.09
+# MAX File: ModelNoAction.max, Date: Tue May 14 23:01:08 2024
+
+DEF Camera001 Viewpoint {
+  position -0.3479 0.4538 -90.58
+  orientation 0 -1 -0.001881 -3.142
+  fieldOfView 0.6024
+  description "Camera001"
+}
+DEF cigarette Transform {
+  translation -1.877 89.28 0.5937
+  rotation -0.003641 1 0.007089 -1.571
+  scale 0.1638 0.1638 0.1638
+  children [
+    DEF cigaretteBody Transform {
+      translation -0.6468 -0.006165 -1.66
+      rotation -0.7072 -0.7071 0.001455 -3.145
+      scale 6.209 6.209 6.209
+      scaleOrientation 0.9365 -0.3403 0.08464 -0.00427
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 1 1
+            }
+          }
+          geometry DEF cigaretteBody-FACES IndexedFaceSet {
+            ccw TRUE
+            solid TRUE
+            coord DEF cigaretteBody-COORD Coordinate { point [
+              -0.1 0 2, 0.1 0 2, -0.1 0 -2, 0.1 0 -2, -0.1 0.2 2, 
+              0.1 0.2 2, -0.1 0.2 -2, 0.1 0.2 -2]
+            }
+            normal Normal { vector [
+              1 0 0, -1 0 0, 0 1 0, 0 0 1, 0 -1 0, 0 0 -1, ] }
+            normalPerVertex TRUE
+            coordIndex [
+              0, 2, 3, -1, 3, 1, 0, -1, 4, 5, 7, -1, 7, 6, 4, -1, 
+              0, 1, 5, -1, 5, 4, 0, -1, 1, 3, 7, -1, 7, 5, 1, -1, 
+              3, 2, 6, -1, 6, 7, 3, -1, 2, 0, 4, -1, 4, 6, 2, -1]
+            normalIndex [
+              4, 4, 4, -1, 4, 4, 4, -1, 2, 2, 2, -1, 2, 2, 2, -1, 
+              3, 3, 3, -1, 3, 3, 3, -1, 0, 0, 0, -1, 0, 0, 0, 
+              -1, 5, 5, 5, -1, 5, 5, 5, -1, 1, 1, 1, -1, 1, 1, 
+              1, -1, ]
+            }
+        }
+      ]
+    },
+    DEF cigaretteEnd Transform {
+      translation -0.6529 -0.01959 12.42
+      rotation -0.6966 -0.7174 0.002091 -3.14
+      scale 6.647 6.647 6.647
+      scaleOrientation 0 -0.9995 -0.03035 -0.001467
+      children [
+          Transform {
+            translation 0 0.1 0
+            children [
+              Shape {
+                appearance Appearance {
+                  material Material {
+                    diffuseColor 0.6941 0.3451 0.1059
+                  }
+                }
+                geometry Box { size 0.2 0.2 0.5 }
+              }
+        ] }
+      ]
+    }
+  ]
+}
+DEF man Transform {
+  translation 0 0 0
+  children [
+    DEF Body Transform {
+      translation 0.6967 -17.11 2.131
+      scale 16.56 16.56 16.56
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.55 0.55 0.55
+              ambientIntensity 1.0
+              specularColor 0 0 0
+              shininess 0.335
+              transparency 0
+            }
+            texture ImageTexture {
+              url "../sceneassets/images/texture.jpg"
+            }
+          }
+          geometry DEF Body-FACES IndexedFaceSet {
+            ccw TRUE
+            solid TRUE
+            coord DEF Body-COORD Coordinate { point [
+              0.25 1.5 0.125, 0.25 1.5 -0.125, 0.25 0.75 0.125, 
+              0.25 0.75 -0.125, -0.25 1.5 -0.125, -0.25 1.5 0.125, 
+              -0.25 0.75 -0.125, -0.25 0.75 0.125]
+            }
+            normal Normal { vector [
+              -0.5773 0.5773 0.5773, 0.5773 0.5773 -0.5773, 0.5773 -0.5773 0.5773, 
+              -0.5773 0.5773 -0.5773, -0.5773 -0.5773 0.5773, 
+              0.5773 -0.5773 -0.5773, -0.5773 -0.5773 -0.5773, 
+              0.5773 0.5773 0.5773, ] }
+            normalPerVertex TRUE
+            texCoord DEF Body-TEXCOORD TextureCoordinate { point [
+              0.3125 0.6875, 0.4375 0.6875, 0.4375 0.5, 0.3125 0.5, 
+              0.25 0.6875, 0.3125 0.6875, 0.3125 0.5, 0.25 0.5, 
+              0.5 0.6875, 0.625 0.6875, 0.625 0.5, 0.5 0.5, 0.4375 0.6875, 
+              0.5 0.6875, 0.5 0.5, 0.4375 0.5, 0.4375 0.6875, 
+              0.3125 0.6875, 0.3125 0.75, 0.4375 0.75, 0.5625 0.75, 
+              0.4375 0.75, 0.4375 0.6875, 0.5625 0.6875]
+            }
+            coordIndex [
+              1, 3, 6, -1, 6, 4, 1, -1, 0, 2, 3, -1, 3, 1, 0, -1, 
+              5, 7, 2, -1, 2, 0, 5, -1, 4, 6, 7, -1, 7, 5, 4, -1, 
+              4, 5, 0, -1, 0, 1, 4, -1, 7, 6, 3, -1, 3, 2, 7, -1]
+            texCoordIndex [
+              0, 3, 2, -1, 2, 1, 0, -1, 4, 7, 6, -1, 6, 5, 4, -1, 
+              8, 11, 10, -1, 10, 9, 8, -1, 12, 15, 14, -1, 14, 13, 12, -1, 
+              16, 19, 18, -1, 18, 17, 16, -1, 20, 23, 22, -1, 
+              22, 21, 20, -1]
+            normalIndex [
+              1, 5, 6, -1, 6, 3, 1, -1, 7, 2, 5, -1, 5, 1, 7, -1, 
+              0, 4, 2, -1, 2, 7, 0, -1, 3, 6, 4, -1, 4, 0, 3, 
+              -1, 3, 0, 7, -1, 7, 1, 3, -1, 4, 6, 5, -1, 5, 2, 
+              4, -1, ]
+            }
+        }
+      ]
+    },
+    DEF Head Transform {
+      translation 5.315 -15.68 -5.534
+      rotation -0.5145 0.8434 -0.1544 -0.599
+      scale 16.56 16.56 16.56
+      scaleOrientation 0.2646 -0.9644 -0.002002 -0.2277
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.55 0.55 0.55
+              ambientIntensity 1.0
+              specularColor 0 0 0
+              shininess 0.335
+              transparency 0
+            }
+            texture ImageTexture {
+              url "../sceneassets/images/texture.jpg"
+            }
+          }
+          geometry DEF Head-FACES IndexedFaceSet {
+            ccw TRUE
+            solid TRUE
+            coord DEF Head-COORD Coordinate { point [
+              0.3415 2.016 0.006357, 0.09171 1.877 -0.4038, 0.3415 1.543 0.1673, 
+              0.09171 1.403 -0.2428, -0.3415 1.957 -0.1673, -0.09171 2.097 0.2428, 
+              -0.3415 1.484 -0.006357, -0.09171 1.623 0.4038]
+            }
+            normal Normal { vector [
+              -0.7885 -0.6147 -0.0146, 0.7885 0.6147 0.0146, 0.7885 -0.4784 0.3863, 
+              -0.2117 0.8004 0.5607, 0.2117 0.2927 -0.9324, -0.7885 0.4784 -0.3863, 
+              0.2117 -0.8004 -0.5607, -0.2117 -0.2927 0.9324, 
+              ] }
+            normalPerVertex TRUE
+            texCoord DEF Head-TEXCOORD TextureCoordinate { point [
+              0.125 0.875, 0.25 0.875, 0.25 0.75, 0.125 0.75, 0 0.875, 
+              0.125 0.875, 0.125 0.75, 0 0.75, 0.375 0.875, 0.5 0.875, 
+              0.5 0.75, 0.375 0.75, 0.25 0.875, 0.375 0.875, 
+              0.375 0.75, 0.25 0.75, 0.25 0.875, 0.125 0.875, 
+              0.125 1, 0.25 1, 0.375 1, 0.25 1, 0.25 0.875, 0.375 0.875]
+            }
+            coordIndex [
+              1, 3, 6, -1, 6, 4, 1, -1, 0, 2, 3, -1, 3, 1, 0, -1, 
+              5, 7, 2, -1, 2, 0, 5, -1, 4, 6, 7, -1, 7, 5, 4, -1, 
+              4, 5, 0, -1, 0, 1, 4, -1, 7, 6, 3, -1, 3, 2, 7, -1]
+            texCoordIndex [
+              0, 3, 2, -1, 2, 1, 0, -1, 4, 7, 6, -1, 6, 5, 4, -1, 
+              8, 11, 10, -1, 10, 9, 8, -1, 12, 15, 14, -1, 14, 13, 12, -1, 
+              16, 19, 18, -1, 18, 17, 16, -1, 20, 23, 22, -1, 
+              22, 21, 20, -1]
+            normalIndex [
+              4, 6, 0, -1, 0, 5, 4, -1, 1, 2, 6, -1, 6, 4, 1, -1, 
+              3, 7, 2, -1, 2, 1, 3, -1, 5, 0, 7, -1, 7, 3, 5, 
+              -1, 5, 3, 1, -1, 1, 4, 5, -1, 7, 0, 6, -1, 6, 2, 
+              7, -1, ]
+            }
+        }
+      ]
+    },
+    DEF Left_Arm Transform {
+      translation -5.736 -17.32 -4.015
+      rotation -0.002053 -1 0.0006828 -1.565
+      scale 16.56 16.56 16.56
+      scaleOrientation 0 0.237 0.9715 -0.06641
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.55 0.55 0.55
+              ambientIntensity 1.0
+              specularColor 0 0 0
+              shininess 0.335
+              transparency 0
+            }
+            texture ImageTexture {
+              url "../sceneassets/images/texture.jpg"
+            }
+          }
+          geometry DEF Left_Arm-FACES IndexedFaceSet {
+            ccw TRUE
+            solid TRUE
+            coord DEF Left_Arm-COORD Coordinate { point [
+              -0.25 1.5 0.125, -0.25 1.5 -0.125, -0.25 0.75 0.125, 
+              -0.25 0.75 -0.125, -0.5 1.5 -0.125, -0.5 1.5 0.125, 
+              -0.5 0.75 -0.125, -0.5 0.75 0.125]
+            }
+            normal Normal { vector [
+              -0.5773 0.5773 0.5773, 0.5773 0.5773 -0.5773, 0.5773 -0.5773 0.5773, 
+              -0.5773 0.5773 -0.5773, -0.5773 -0.5773 0.5773, 
+              0.5773 -0.5773 -0.5773, -0.5773 -0.5773 -0.5773, 
+              0.5773 0.5773 0.5773, ] }
+            normalPerVertex TRUE
+            texCoord DEF Left_Arm-TEXCOORD TextureCoordinate { point [
+              0.5625 0.1875, 0.625 0.1875, 0.625 0, 0.5625 0, 0.5 0.1875, 
+              0.5625 0.1875, 0.5625 0, 0.5 0, 0.6875 0.1875, 
+              0.75 0.1875, 0.75 0, 0.6875 0, 0.625 0.1875, 0.6875 0.1875, 
+              0.6875 0, 0.625 0, 0.625 0.1875, 0.5625 0.1875, 
+              0.5625 0.25, 0.625 0.25, 0.6875 0.25, 0.625 0.25, 
+              0.625 0.1875, 0.6875 0.1875]
+            }
+            coordIndex [
+              1, 3, 6, -1, 6, 4, 1, -1, 0, 2, 3, -1, 3, 1, 0, -1, 
+              5, 7, 2, -1, 2, 0, 5, -1, 4, 6, 7, -1, 7, 5, 4, -1, 
+              4, 5, 0, -1, 0, 1, 4, -1, 7, 6, 3, -1, 3, 2, 7, -1]
+            texCoordIndex [
+              0, 3, 2, -1, 2, 1, 0, -1, 4, 7, 6, -1, 6, 5, 4, -1, 
+              8, 11, 10, -1, 10, 9, 8, -1, 12, 15, 14, -1, 14, 13, 12, -1, 
+              16, 19, 18, -1, 18, 17, 16, -1, 20, 23, 22, -1, 
+              22, 21, 20, -1]
+            normalIndex [
+              1, 5, 6, -1, 6, 3, 1, -1, 7, 2, 5, -1, 5, 1, 7, -1, 
+              0, 4, 2, -1, 2, 7, 0, -1, 3, 6, 4, -1, 4, 0, 3, 
+              -1, 3, 0, 7, -1, 7, 1, 3, -1, 4, 6, 5, -1, 5, 2, 
+              4, -1, ]
+            }
+        }
+      ]
+    },
+    DEF Left_Leg Transform {
+      translation 0.6967 -17.11 2.131
+      scale 16.56 16.56 16.56
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.55 0.55 0.55
+              ambientIntensity 1.0
+              specularColor 0 0 0
+              shininess 0.335
+              transparency 0
+            }
+            texture ImageTexture {
+              url "../sceneassets/images/texture.jpg"
+            }
+          }
+          geometry DEF Left_Leg-FACES IndexedFaceSet {
+            ccw TRUE
+            solid TRUE
+            coord DEF Left_Leg-COORD Coordinate { point [
+              0.00625 0.75 0.125, 0.00625 0.75 -0.125, 0.00625 0 0.125, 
+              0.00625 0 -0.125, -0.2438 0.75 -0.125, -0.2438 0.75 0.125, 
+              -0.2438 0 -0.125, -0.2438 0 0.125]
+            }
+            normal Normal { vector [
+              -0.5773 0.5773 0.5773, 0.5773 0.5773 -0.5773, 0.5773 -0.5773 0.5773, 
+              -0.5773 0.5773 -0.5773, -0.5773 -0.5773 0.5773, 
+              0.5773 -0.5773 -0.5773, -0.5773 -0.5773 -0.5773, 
+              0.5773 0.5773 0.5773, ] }
+            normalPerVertex TRUE
+            texCoord DEF Left_Leg-TEXCOORD TextureCoordinate { point [
+              0.3125 0.1875, 0.375 0.1875, 0.375 0, 0.3125 0, 0.25 0.1875, 
+              0.3125 0.1875, 0.3125 0, 0.25 0, 0.4375 0.1875, 
+              0.5 0.1875, 0.5 0, 0.4375 0, 0.375 0.1875, 0.4375 0.1875, 
+              0.4375 0, 0.375 0, 0.375 0.1875, 0.3125 0.1875, 
+              0.3125 0.25, 0.375 0.25, 0.4375 0.25, 0.375 0.25, 
+              0.375 0.1875, 0.4375 0.1875]
+            }
+            coordIndex [
+              1, 3, 6, -1, 6, 4, 1, -1, 0, 2, 3, -1, 3, 1, 0, -1, 
+              5, 7, 2, -1, 2, 0, 5, -1, 4, 6, 7, -1, 7, 5, 4, -1, 
+              4, 5, 0, -1, 0, 1, 4, -1, 7, 6, 3, -1, 3, 2, 7, -1]
+            texCoordIndex [
+              0, 3, 2, -1, 2, 1, 0, -1, 4, 7, 6, -1, 6, 5, 4, -1, 
+              8, 11, 10, -1, 10, 9, 8, -1, 12, 15, 14, -1, 14, 13, 12, -1, 
+              16, 19, 18, -1, 18, 17, 16, -1, 20, 23, 22, -1, 
+              22, 21, 20, -1]
+            normalIndex [
+              1, 5, 6, -1, 6, 3, 1, -1, 7, 2, 5, -1, 5, 1, 7, -1, 
+              0, 4, 2, -1, 2, 7, 0, -1, 3, 6, 4, -1, 4, 0, 3, 
+              -1, 3, 0, 7, -1, 7, 1, 3, -1, 4, 6, 5, -1, 5, 2, 
+              4, -1, ]
+            }
+        }
+      ]
+    },
+    DEF Right_Arm Transform {
+      translation 0.6967 -17.11 2.131
+      scale 16.56 16.56 16.56
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.55 0.55 0.55
+              ambientIntensity 1.0
+              specularColor 0 0 0
+              shininess 0.335
+              transparency 0
+            }
+            texture ImageTexture {
+              url "../sceneassets/images/texture.jpg"
+            }
+          }
+          geometry DEF Right_Arm-FACES IndexedFaceSet {
+            ccw TRUE
+            solid TRUE
+            coord DEF Right_Arm-COORD Coordinate { point [
+              0.5 1.5 0.125, 0.5 1.5 -0.125, 0.5 0.75 0.125, 0.5 0.75 -0.125, 
+              0.25 1.5 -0.125, 0.25 1.5 0.125, 0.25 0.75 -0.125, 
+              0.25 0.75 0.125]
+            }
+            normal Normal { vector [
+              -0.5773 0.5773 0.5773, 0.5773 0.5773 -0.5773, 0.5773 -0.5773 0.5773, 
+              -0.5773 0.5773 -0.5773, -0.5773 -0.5773 0.5773, 
+              0.5773 -0.5773 -0.5773, -0.5773 -0.5773 -0.5773, 
+              0.5773 0.5773 0.5773, ] }
+            normalPerVertex TRUE
+            texCoord DEF Right_Arm-TEXCOORD TextureCoordinate { point [
+              0.6875 0.6875, 0.75 0.6875, 0.75 0.5, 0.6875 0.5, 
+              0.625 0.6875, 0.6875 0.6875, 0.6875 0.5, 0.625 0.5, 
+              0.8125 0.6875, 0.875 0.6875, 0.875 0.5, 0.8125 0.5, 
+              0.75 0.6875, 0.8125 0.6875, 0.8125 0.5, 0.75 0.5, 
+              0.75 0.6875, 0.6875 0.6875, 0.6875 0.75, 0.75 0.75, 
+              0.8125 0.75, 0.75 0.75, 0.75 0.6875, 0.8125 0.6875]
+            }
+            coordIndex [
+              1, 3, 6, -1, 6, 4, 1, -1, 0, 2, 3, -1, 3, 1, 0, -1, 
+              5, 7, 2, -1, 2, 0, 5, -1, 4, 6, 7, -1, 7, 5, 4, -1, 
+              4, 5, 0, -1, 0, 1, 4, -1, 7, 6, 3, -1, 3, 2, 7, -1]
+            texCoordIndex [
+              0, 3, 2, -1, 2, 1, 0, -1, 4, 7, 6, -1, 6, 5, 4, -1, 
+              8, 11, 10, -1, 10, 9, 8, -1, 12, 15, 14, -1, 14, 13, 12, -1, 
+              16, 19, 18, -1, 18, 17, 16, -1, 20, 23, 22, -1, 
+              22, 21, 20, -1]
+            normalIndex [
+              1, 5, 6, -1, 6, 3, 1, -1, 7, 2, 5, -1, 5, 1, 7, -1, 
+              0, 4, 2, -1, 2, 7, 0, -1, 3, 6, 4, -1, 4, 0, 3, 
+              -1, 3, 0, 7, -1, 7, 1, 3, -1, 4, 6, 5, -1, 5, 2, 
+              4, -1, ]
+            }
+        }
+      ]
+    },
+    DEF Right_Leg Transform {
+      translation 0.8064 -17.12 1.654
+      scale 16.56 16.56 16.56
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0.55 0.55 0.55
+              ambientIntensity 1.0
+              specularColor 0 0 0
+              shininess 0.335
+              transparency 0
+            }
+            texture ImageTexture {
+              url "../sceneassets/images/texture.jpg"
+            }
+          }
+          geometry DEF Right_Leg-FACES IndexedFaceSet {
+            ccw TRUE
+            solid TRUE
+            coord DEF Right_Leg-COORD Coordinate { point [
+              0.2438 0.75 0.125, 0.2438 0.75 -0.125, 0.2438 0 0.125, 
+              0.2438 0 -0.125, -0.00625 0.75 -0.125, -0.00625 0.75 0.125, 
+              -0.00625 0 -0.125, -0.00625 0 0.125]
+            }
+            normal Normal { vector [
+              -0.5773 0.5773 0.5773, 0.5773 0.5773 -0.5773, 0.5773 -0.5773 0.5773, 
+              -0.5773 0.5773 -0.5773, -0.5773 -0.5773 0.5773, 
+              0.5773 -0.5773 -0.5773, -0.5773 -0.5773 -0.5773, 
+              0.5773 0.5773 0.5773, ] }
+            normalPerVertex TRUE
+            texCoord DEF Right_Leg-TEXCOORD TextureCoordinate { point [
+              0.0625 0.6875, 0.125 0.6875, 0.125 0.5, 0.0625 0.5, 
+              0 0.6875, 0.0625 0.6875, 0.0625 0.5, 0 0.5, 0.1875 0.6875, 
+              0.25 0.6875, 0.25 0.5, 0.1875 0.5, 0.125 0.6875, 
+              0.1875 0.6875, 0.1875 0.5, 0.125 0.5, 0.125 0.6875, 
+              0.0625 0.6875, 0.0625 0.75, 0.125 0.75, 0.1875 0.75, 
+              0.125 0.75, 0.125 0.6875, 0.1875 0.6875]
+            }
+            coordIndex [
+              1, 3, 6, -1, 6, 4, 1, -1, 0, 2, 3, -1, 3, 1, 0, -1, 
+              5, 7, 2, -1, 2, 0, 5, -1, 4, 6, 7, -1, 7, 5, 4, -1, 
+              4, 5, 0, -1, 0, 1, 4, -1, 7, 6, 3, -1, 3, 2, 7, -1]
+            texCoordIndex [
+              0, 3, 2, -1, 2, 1, 0, -1, 4, 7, 6, -1, 6, 5, 4, -1, 
+              8, 11, 10, -1, 10, 9, 8, -1, 12, 15, 14, -1, 14, 13, 12, -1, 
+              16, 19, 18, -1, 18, 17, 16, -1, 20, 23, 22, -1, 
+              22, 21, 20, -1]
+            normalIndex [
+              1, 5, 6, -1, 6, 3, 1, -1, 7, 2, 5, -1, 5, 1, 7, -1, 
+              0, 4, 2, -1, 2, 7, 0, -1, 3, 6, 4, -1, 4, 0, 3, 
+              -1, 3, 0, 7, -1, 7, 1, 3, -1, 4, 6, 5, -1, 5, 2, 
+              4, -1, ]
+            }
+        }
+      ]
+    }
+  ]
+}
