@@ -1,6 +1,5 @@
 <!doctype html>
 <html class="no-js" lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -8,19 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../application/css/bootstrap.min.css">
     <!-- X3DOM CSS -->
-    <link rel="stylesheet" href="../css/x3dom.css">
+    <link rel="stylesheet" href="../application/css/x3dom.css">
     <!-- Plugins CSS -->
-    <link rel="stylesheet" href="../css/plugins.css">
+    <link rel="stylesheet" href="../application/css/plugins.css">
     <!-- Lightbox CSS -->
-    <link rel="stylesheet" href="../css/lightbox.css">
+    <link rel="stylesheet" href="../application/css/lightbox.css">
     <!-- FancyBox CSS -->
-    <link rel="stylesheet" href="../css/jquery.fancybox.css">
-    <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="../application/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="../application/css/jquery.fancybox.min.css">
     <!-- Main Style CSS -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../application/css/style.css">
+    <link rel="stylesheet" href="../application/css/custom.css">
+
+    <script type="text/javascript">
+        var defaultModelUrl = "<?php echo htmlspecialchars($data[0]['defaultModelURL'], ENT_QUOTES, 'UTF-8'); ?>";
+        var action1ModelUrl = "<?php echo htmlspecialchars($data[0]['action1ModelURL'], ENT_QUOTES, 'UTF-8'); ?>";
+        var action2ModelUrl = "<?php echo htmlspecialchars($data[0]['action2ModelURL'], ENT_QUOTES, 'UTF-8'); ?>";
+    </script>
 </head>
 
 <body id="body">
@@ -155,7 +160,7 @@
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-sm-6">
                             <div class="slider-single-img slider-animated-1">
-                                <img class="animated" src="../assets/images/Coke.png" alt="">
+                                <img class="animated" src="<?php echo $data[0]['exhURL']?>" alt="">
                             </div>
                         </div>
                     </div>
@@ -179,7 +184,7 @@
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-sm-6">
                             <div class="slider-single-img slider-animated-1">
-                                <img class="animated" src="../assets/images/Fanta.png" alt="">
+                                <img class="animated" src="<?php echo $data[1]['exhURL']?>" alt="">
                             </div>
                         </div>
                     </div>
@@ -203,7 +208,7 @@
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-sm-6">
                             <div class="slider-single-img slider-animated-1">
-                                <img class="animated" src="../assets/images/Sprite.png" alt="">
+                                <img class="animated" src="<?php echo $data[2]['exhURL']?>" alt="">
                             </div>
                         </div>
                     </div>
@@ -227,7 +232,7 @@
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-sm-6">
                             <div class="slider-single-img-2 slider-animated-1">
-                                <img class="animated" src="../assets/images/Coke.png" alt="">
+                                <img class="animated" src="<?php echo $data[0]['exhURL']?>" alt="">
                             </div>
                         </div>
                     </div>
@@ -249,7 +254,7 @@
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-sm-6">
                             <div class="slider-single-img-2 slider-animated-1">
-                                <img class="animated" src="../assets/images/Fanta.png" alt="">
+                                <img class="animated" src="<?php echo $data[1]['exhURL']?>" alt="">
                             </div>
                         </div>
                     </div>
@@ -271,7 +276,7 @@
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-sm-6">
                             <div class="slider-single-img-2 slider-animated-1">
-                                <img class="animated" src="../assets/images/Sprite.png" alt="">
+                                <img class="animated" src="<?php echo $data[2]['exhURL']?>" alt="">
                             </div>
                         </div>
                     </div>
@@ -295,7 +300,7 @@
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-sm-6">
                             <div class="slider-single-img-3 slider-animated-1">
-                                <img class="animated" src="../assets/images/Coke.png" alt="">
+                                <img class="animated" src="<?php echo $data[0]['exhURL']?>" alt="">
                             </div>
                         </div>
                     </div>
@@ -317,7 +322,7 @@
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-sm-6">
                             <div class="slider-single-img-3 slider-animated-1">
-                                <img class="animated" src="../assets/images/Fanta.png" alt="">
+                                <img class="animated" src="<?php echo $data[1]['exhURL']?>" alt="">
                             </div>
                         </div>
                     </div>
@@ -339,7 +344,7 @@
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-12 col-sm-6">
                             <div class="slider-single-img-3 slider-animated-1">
-                                <img class="animated" src="../assets/images/Sprite.png" alt="">
+                                <img class="animated" src="<?php echo $data[2]['exhURL']?>" alt="">
                             </div>
                         </div>
                     </div>
@@ -356,9 +361,21 @@
                     <li class="active"><a id="show-cokeModel" href="#">Coca Cola Model</a></li>
                     <li class="active"><a id="show-fantaModel" href="#">Fanta Model</a></li>
                     <li class="active"><a id="show-spriteModel" href="#">Sprite Model</a></li>
+                    <li class="active"><a id="show-extraModel" data-fancybox data-src="#model-fancybox" href="#">Extra Model</a></li>
                 </ul>
             </div>
         </div>
+    </div>
+
+    <div id="model-fancybox" style="width: 400px; height: 500px; display: none">
+        <x3d>
+            <scene>
+                <inline id="extraModel" nameSpaceName="model" mapDEFToID="true" url="<?php echo htmlspecialchars($data[0]['defaultModelURL'], ENT_QUOTES, 'UTF-8');; ?>"></inline>
+            </scene>
+        </x3d>
+        <button class="btn btn-primary" id="resetChange" onclick="resetAnimation()">Default</button>
+        <button class="btn btn-primary" id="animateChange1" onclick="changeAnimation()">Animate 1</button>
+        <button class="btn btn-primary" id="animateChange2" onclick="changeAnimation()">Animate 2</button>
     </div>
 
     <div id="modelpage-content" class="model-details-area pt-100 pb-95">
@@ -370,13 +387,13 @@
                             <scene class="zoompro">
                                 <Switch whichChoice="0" id="SceneSwitch">
                                     <transform>
-                                        <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" class="model" url="../assets/models/export/bottleSpin.x3d"></inline>
+                                        <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" class="model" url="<?php echo $data[0]['modelURL']?>"></inline>
                                     </transform>
                                     <transform>
-                                        <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" class="model" url="../assets/models/export/canSpin.x3d"></inline>
+                                        <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" class="model" url="<?php echo $data[1]['modelURL']?>"></inline>
                                     </transform>
                                     <transform>
-                                        <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" class="model" url="../assets/models/export/cupSpin.x3d"></inline>
+                                        <inline nameSpaceName="model" mapDEFToID="true" onclick="animateModel();" class="model" url="<?php echo $data[2]['modelURL']?>"></inline>
                                     </transform>
                                 </Switch>
                             </scene>
@@ -461,31 +478,28 @@
     <!-- 3D images -->
     <div id="imgs-page" class="_3dImages-area pb-70">
         <div class="container">
-            <div class="section-title text-center pb-60">
-                <h2>Gallery</h2>
-                <p>3D images</p>
-            </div>
+            <div id="gallery-header" class="section-title text-center pb-60"></div>
             <div id="gallery" class="arrivals-wrap scroll-zoom">
                 <div class="_3d-images _3dImages-slider-active owl-carousel">
                     <ul class="_3d-image _3d-image-action-on-hover _3d-image-category-right-bottom mb-30">
                         <li class="_3d-image-inner">
                             <div class="_3d-image-wrap">
-                                <a href="" class="_3d-image-image thumbnail" data-fancybox data-src="../assets/models/renderoutput/coke-render.png">
-                                    <img src="../assets/images/3Dimg/coke-render.png" alt="">
+                                <a href="" class="_3d-image-image thumbnail" data-fancybox data-src="<?php echo $data[0]['imagesURL']?>">
+                                    <img src="<?php echo $data[0]['galleryImageURL']?>" alt="">
                                 </a>
                             </div>
                         </li>
                         <li class="_3d-image-inner">
                             <div class="_3d-image-wrap">
-                                <a href="" class="_3d-image-image thumbnail" data-fancybox data-src="../assets/models/renderoutput/fanta-render.jpg">
-                                    <img src="../assets/images/3Dimg/fanta-render.png" alt="">
+                                <a href="" class="_3d-image-image thumbnail" data-fancybox data-src="<?php echo $data[1]['imagesURL']?>">
+                                    <img src="<?php echo $data[1]['galleryImageURL']?>" alt="">
                                 </a>
                             </div>
                         </li>
                         <li class="_3d-image-inner">
                             <div class="_3d-image-wrap">
-                                <a href="" class="_3d-image-image thumbnail" data-fancybox data-src="../assets/models/renderoutput/sprite-render.png">
-                                    <img src="../assets/images/3Dimg/sprite-render.png" alt="">
+                                <a href="" class="_3d-image-image thumbnail" data-fancybox data-src="<?php echo $data[2]['imagesURL']?>">
+                                    <img src="<?php echo $data[2]['galleryImageURL']?>" alt="">
                                 </a>
                             </div>
                         </li>
@@ -559,38 +573,39 @@
 </div>
 
 <!-- LightBox JS -->
-<script src="../js/lightbox-plus-jquery.min.js" crossorigin="anonymous"></script>
+<script src="../application/js/lightbox-plus-jquery.min.js" crossorigin="anonymous"></script>
 <!-- X3DOM JS -->
-<script src="../js/x3dom.js" crossorigin="anonymous"></script>
+<script src="../application/js/x3dom.js" crossorigin="anonymous"></script>
 <!-- getJsonData JS -->
-<script src="../js/getJsonData.js" crossorigin="anonymous"></script>
+<script src="../application/js/getJsonData.js" crossorigin="anonymous"></script>
 <!-- Index LOGO Generator JS -->
-<script src="../js/indexLogo.js" crossorigin="anonymous"></script>
+<script src="../application/js/indexLogo.js" crossorigin="anonymous"></script>
 <!-- jQuery JS -->
-<script src="../js/jquery-1.12.4.min.js" crossorigin="anonymous"></script>
+<script src="../application/js/jquery-1.12.4.min.js" crossorigin="anonymous"></script>
 <!-- Popper JS -->
-<script src="../js/popper.min.js" crossorigin="anonymous"></script>
+<script src="../application/js/popper.min.js" crossorigin="anonymous"></script>
 <!-- Bootstrap JS -->
-<script src="../js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="../application/js/bootstrap.min.js" crossorigin="anonymous"></script>
 <!-- Plugins JS -->
-<script src="../js/plugins.js" crossorigin="anonymous"></script>
+<script src="../application/js/plugins.js" crossorigin="anonymous"></script>
 <!-- Ajax Mail -->
-<script src="../js/ajax-mail.js" crossorigin="anonymous"></script>
+<script src="../application/js/ajax-mail.js" crossorigin="anonymous"></script>
 <!-- Main JS -->
-<script src="../js/main.js" crossorigin="anonymous"></script>
+<script src="../application/js/main.js" crossorigin="anonymous"></script>
 <!-- ChangePage JS -->
-<script src="../js/changePage.js" crossorigin="anonymous"></script>
+<script src="../application/js/changePage.js" crossorigin="anonymous"></script>
 <!-- ChangeStyle JS -->
-<script src="../js/changeStyle.js" crossorigin="anonymous"></script>
+<script src="../application/js/changeStyle.js" crossorigin="anonymous"></script>
 <!-- ChangeModel JS -->
-<script src="../js/changeModel.js" crossorigin="anonymous"></script>
+<script src="../application/js/changeModel.js" crossorigin="anonymous"></script>
 <!-- Model Interaction JS -->
-<script src="../js/modelInteraction.js" crossorigin="anonymous"></script>
+<script src="../application/js/modelInteraction.js" crossorigin="anonymous"></script>
+<script src="../application/js/extraModelAnimation.js" crossorigin="anonymous"></script>
 <!-- Font Awesome JS -->
 <script src="https://kit.fontawesome.com/6ac3910c4e.js" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/1df54c4888.js" crossorigin="anonymous"></script>
 <!-- FancyBox JS -->
-<script src="../js/jquery.fancybox.js" crossorigin="anonymous"></script>
-<script src="../js/jquery.fancybox.min.js" crossorigin="anonymous"></script>
+<script src="../application/js/jquery.fancybox.js" crossorigin="anonymous"></script>
+<script src="../application/js/jquery.fancybox.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
