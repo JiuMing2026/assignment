@@ -2,20 +2,12 @@
 
 class Model {
     public $dbhandle;
-    public function model3DInfo() {
-        return array(
-            'model1' => 'Coke Bottle 3D Image',
-            'model2' => 'Fanta Can 3D Image',
-            'model3' => 'Sprite Cup 3D Image'
-        );
-    }
-
     public function __construct() {
-        $dsn = 'mysql:../db/assignment.db';
+        $dsn = ('sqlite:./db/assignment.db');
 
         try {
             $this->dbhandle = new PDO(
-                $dsn,  'root',  'LZi9z<k(S8QU', array(
+                $dsn,  'user',  'password', array(
                                                                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                                                                     PDO::ATTR_EMULATE_PREPARES => false,
                                                                     ));
@@ -28,30 +20,40 @@ class Model {
 
     function dbCreateTable() {
         try {
-            $this->dbhandle -> exec(
-                "CREATE TABLE Model_3D (
-                    id INTEGER PRIMARY KEY,
-                    x3dModelTitle TEXT,
-                    x3dCreationMethod TEXT,
-                    modelTitle TEXT,
-                    modelSubtitle TEXT,
-                    modelDescription TEXT
-                )"
-            );
-            return "Model_3D table is successfully created inside assignment.db file";
+            $this->dbhandle -> exec("
+                            CREATE TABLE Model_3D (
+                                id INTEGER PRIMARY KEY,
+                                exhURL TEXT,
+                                modelURL TEXT,
+                                galleryImageURL TEXT,
+                                imagesURL TEXT
+                            );
+                            CREATE TABLE ExtraModel(
+                                id INTEGER PRIMARY KEY,
+                                defaultModelURL TEXT,
+                                action1ModelURL TEXT,
+                                action2ModelURL TEXT
+                            )
+                ");
+            return "Tables are successfully created inside assignment.db file";
         }
         catch (PDOEXception $e) {
             print new Exception($e->getMessage());
         }
-    $this->dbhandle = NULL;
     }
 
     function dbInsertData() {
         try {
             $this->dbhandle -> exec(
-                "INSERT INTO Model_3D (id, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) VALUES (1, 'Coke Bottle 3D Image', 'Extrusion', 'Coke Bottle', 'Coca Cola', 'A 3D Coke Bottle created using X3D')" .
-                "INSERT INTO Model_3D (id, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) VALUES (2, 'Fanta Can 3D Image', 'Extrusion', 'Fanta Can', 'Fanta', 'A 3D Fanta Can created using X3D')" .
-                "INSERT INTO Model_3D (id, x3dModelTitle, x3dCreationMethod, modelTitle, modelSubtitle, modelDescription) VALUES (3, 'Sprite Cup 3D Image', 'Extrusion', 'Sprite Cup', 'Sprite', 'A 3D Sprite Cup created using X3D')"
+                "
+                INSERT INTO Model_3D (exhURL, modelURL, galleryImageURL, imagesURL) 
+                VALUES ('../application/assets/images/Coke.png', '../application/assets/models/export/bottleSpin.x3d', '../application/assets/images/3Dimg/coke-render.png', '../application/assets/models/renderoutput/coke-render.png');" .
+                "INSERT INTO Model_3D (exhURL, modelURL, galleryImageURL, imagesURL) 
+                VALUES ('../application/assets/images/Fanta.png', '../application/assets/models/export/canSpin.x3d', '../application/assets/images/3Dimg/fanta-render.png', '../application/assets/models/renderoutput/fanta-render.jpg');" .
+                "INSERT INTO Model_3D (exhURL, modelURL, galleryImageURL, imagesURL) 
+               VALUES ('../application/assets/images/Sprite.png', '../application/assets/models/export/cupSpin.x3d', '../application/assets/images/3Dimg/sprite-render.png', '../application/assets/models/renderoutput/sprite-render.png');" .
+                "INSERT INTO ExtraModel (defaultModelURL, action1ModelURL, action2ModelURL)
+                VALUES ('../application/assets/models/export/modelNoAction.x3d', '../application/assets/models/export/modelAction1.x3d', '../application/assets/models/export/modelAction2.x3d');"
             );
             return "New record created successfully";
         }
@@ -63,17 +65,20 @@ class Model {
 
     function dbGetData() {
         try {
-            $sql = 'SELECT * FROM Model_3D';
+            $sql = 'SELECT M.*, E.defaultModelURL, E.action1ModelURL, E.action2ModelURL FROM Model_3D M CROSS JOIN ExtraModel E';
             $stmt = $this -> dbhandle -> query($sql);
             $result = null;
             $i = 0;
             while ($data = $stmt -> fetch()) {
                 $result[$i]['id'] = $data['id'];
-                $result[$i]['x3dModelTitle'] = $data['x3dModelTitle'];
-                $result[$i]['x3dCreationMethod'] = $data['x3dCreationMethod'];
-                $result[$i]['modelTitle'] = $data['modelTitle'];
-                $result[$i]['modelSubtitle'] = $data['modelSubtitle'];
-                $result[$i]['modelDescription'] = $data['modelDescription'];
+                $result[$i]['exhURL'] = $data['exhURL'];
+                $result[$i]['modelURL'] = $data['modelURL'];
+                $result[$i]['galleryImageURL'] = $data['galleryImageURL'];
+                $result[$i]['imagesURL'] = $data['imagesURL'];
+
+                $result[$i]['defaultModelURL'] = $data['defaultModelURL'];
+                $result[$i]['action1ModelURL'] = $data['action1ModelURL'];
+                $result[$i]['action2ModelURL'] = $data['action2ModelURL'];
                 $i++;
             }
         }
@@ -84,3 +89,4 @@ class Model {
         return $result;
     }
 }
+
